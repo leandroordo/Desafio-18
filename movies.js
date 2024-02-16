@@ -1,0 +1,346 @@
+var movies = [
+  {
+    id: "0",
+    title: "Iron Man",
+    year: "2008",
+    img: "./img/0.jpg",
+    sinopsis:
+      "Tony Stark (Robert Downey Jr.) se dedica a vender armas y lo tiene todo: dinero, poder, mujeres... Durante una demostración en Afganistán, un poderoso traficante lo captura. Gravemente herido (un fragmento de metralla está junto a su corazón), Stark se construye una armadura que le mantiene con vida y gracias a la cual escapa. Ya en USA, jura usar su nuevo traje para salvar a la gente.",
+  },
+  {
+    id: "1",
+    title: "El increíble Hulk",
+    year: "2008",
+    img: "./img/1.jpg",
+    sinopsis:
+      "En esta ocasión, Bruce Banner (Edward Norton) comienza la película en Brasil, donde busca una cura para su sobreexposición a los rayos gamma que le transforma en Hulk. Banner huye del ejército, liderado por el general Ross (William Hurt), y del militar Emil Blonsky (Tim Roth), transformado también en un gigantesco y poderoso ser, La Abominación, que tras hacerse con el secreto que le convierte en un monstruo verde. Solo Betty Ross (Liv Tyler) estará a su lado",
+  },
+  {
+    id: "2",
+    title: "Iron Man 2",
+    year: "2010",
+    img: "./img/2.jpg",
+    sinopsis:
+      "Sometido a presiones por parte del gobierno, la prensa y la opinión pública para que comparta su tecnología con el ejército, Tony Stark (Robert Downey Jr.) es reacio a desvelar los secretos de la armadura de Iron Man porque teme que esa información pueda caer en manos indeseables. Con Pepper Potts (Gwyneth Paltrow) y James “Rhodey” Rhodes (Don Cheadle) a su lado, Tony forja alianzas nuevas y se enfrenta a nuevas y poderosas fuerzas.",
+  },
+  {
+    id: "3",
+    title: "Thor",
+    year: "2011",
+    img: "./img/3.jpg",
+    sinopsis:
+      "Thor (Chris Hemsworth) es un poderoso pero arrogante guerrero cuyos imprudentes actos reavivan una antigua guerra. Como consecuencia, Thor es castigado a ser enviado a la Tierra, donde se ve obligado a vivir entre humanos. Cuando el villano más peligroso de su mundo envía a las fuerzas más oscuras de Asgard, Thor aprende lo que hace falta para ser un verdadero héroe.",
+  },
+  {
+    id: "4",
+    title: "Capitán América: El primer vengador",
+    year: "2011",
+    img: "./img/4.jpg",
+    sinopsis:
+      "Se centra en los primeros días del Universo Marvel, cuando Steve Rogers (Chris Evans) se ofrece voluntario para participar en un programa experimental que lo convierte en el super soldado conocido como Capitán América. Rogers se une a Bucky Barnes (Sebastian Stan) y Peggy Carter (Hayley Atwell) para hacer la guerra a los malvados de la organización HYDRA, dirigido por el villano Red Skull (Hugo Weaving).",
+  },
+  {
+    id: "5",
+    title: "Los Vengadores",
+    year: "2012",
+    img: "./img/5.jpg",
+    sinopsis:
+      "Representa la reunión más espectacular jamás vista de superhéroes. Un enemigo inesperado amenaza con poner en peligro la seguridad mundial, así que Nick Fury (Samuel L. Jackson), director de la agencia internacional para el mantenimiento de la paz conocida con el nombre de S.H.I.E.L.D., necesita encontrar urgentemente un equipo que salve al mundo del mayor de los desastres.",
+  },
+  {
+    id: "6",
+    title: "Iron Man 3",
+    year: "2013",
+    img: "./img/6.jpg",
+    sinopsis:
+      "Clausurados por el gobierno, los experimentos biológicos de Aldrich Killian (Guy Pearce) para perfeccionar humanos encuentran un mecenas en el Mandarín (Ben Kingsley). Pero sus oscuras intenciones encontrarán un enemigo: Iron Man (Robert Downey Jr.)",
+  },
+  {
+    id: "7",
+    title: "Thor: El mundo oscuro",
+    year: "2013",
+    img: "./img/7.jpg",
+    sinopsis:
+      " 'Thor: El Mundo Oscuro' de Marvel es la continuación en la gran pantalla de las aventuras de Thor, el Poderoso Vengador mientras lucha por salvar la Tierra y los Nueve Reinos de un oscuro enemigo que es anterior al mismísimo universo.",
+  },
+  {
+    id: "8",
+    title: "Capitán América: El Soldado de Invierno",
+    year: "2014",
+    img: "./img/8.jpg",
+    sinopsis:
+      "Dos años después de la batalla de Nueva York en la que Los Vengadores salvaron al mundo, el Capitán América (Chris Evans) se enfrenta al Soldado de Invierno (Sebastian Stan), un enemigo estrechamente conectado con su pasado. Un desafío que le llevará a destapar, junto a la Viuda Negra (Scarlett Johansson), una turbia trama en el mismo corazón de S.H.I.E.L.D.",
+  },
+  {
+    id: "9",
+    title: "Guardianes de la Galaxia",
+    year: "2014",
+    img: "./img/9.jpg",
+    sinopsis:
+      "El temerario aventurero Peter Quill (Chris Pratt) es objeto de un implacable cazarrecompensas después de robar una misteriosa esfera. Para poder escapar del incansable Ronan, Quill se ve obligado a pactar una complicada tregua con un cuartero de disparatados inadaptados: Rocket (Bradley Cooper), un mapache armado con un rifle, Groot (Vin Diesel), un humanoide con forma de árbol, la letal y enigmática Gamora (Zoe Saldana) y el vengativo Drax el Destructor (Dave Bautista).",
+  },
+  {
+    id: "10",
+    title: "Vengadores: La era de Ultrón",
+    year: "2015",
+    img: "./img/10.jpg",
+    sinopsis:
+      " Después de la caída de S.H.I.E.L.D., Tony Stark (Robert Downey Jr.) crea Ultrón (James Spader), un sistema de seguridad artificial para proteger la Tierra. Cuando este toma conciencia y se rebela contra su creador, Los Vengadores deberán destruirlo antes de que aniquile a la Humanidad.",
+  },
+  {
+    id: "11",
+    title: "Ant-Man",
+    year: "2015",
+    img: "./img/11.jpg",
+    sinopsis:
+      "Armado con un supertraje que le permite reducir su tamaño, aumentar su fuerza y comunicarse con los insectos, Scott Lang (Paul Rudd) se convierte en el inesperado pupilo del Dr. Hank Pym (Michael Douglas). Junto a la hija de este, Hope Van Dyne (Evangeline Lilly), Lang deberá planear un robo en el laboratorio del científico Darren Cross (Corey Stoll).",
+  },
+  {
+    id: "12",
+    title: "Capitán América: Civil War",
+    year: "2016",
+    img: "./img/12.jpg",
+    sinopsis:
+      "Después de que otro incidente internacional en el que se ven envueltos los Vengadores produzca daños colaterales, la presión política obliga a poner en marcha un sistema para depurar responsabilidades y un organismo rector que determine cuándo hay que recurrir a los servicios del equipo. El nuevo statu quo divide a los Vengadores mientras intentan proteger al mundo de un nuevo malvado.",
+  },
+  {
+    id: "13",
+    title: "Doctor Extraño",
+    year: "2016",
+    img: "./img/13.jpg",
+    sinopsis:
+      "Sigue la historia del neurocirujano Stephen Strange (Benedict Cumberbatch), quien, después de un terrible accidente de tráfico, sus manos quedan destrozadas e iniciará un viaje tanto físico como espiritual para recuperarse. Así, descubre el mundo oculto de las dimensiones mágicas.",
+  },
+  {
+    id: "14",
+    title: "Guardianes de la Galaxia Vol. 2",
+    year: "2017",
+    img: "./img/14.jpg",
+    sinopsis:
+      "Saboreando aún el éxito de su última aventura, los Guardianes de la Galaxia acuden al rescate de Sovereign, un planeta poblado por seres genéticamente perfectos amenazado por el temible monstruo Obelisco. Sus aventuras les llevarán también a Berhert, donde Peter Quill (Chris Pratt), tras años buscándole, encontrará a su padre, Ego (Kurt Russell).",
+  },
+  {
+    id: "15",
+    title: "Thor: Ragnarok",
+    year: "2017",
+    img: "./img/15.jpg",
+    sinopsis:
+      "Thor está preso al otro lado del universo sin su poderoso martillo. Su objetivo es volver a Asgard y parar el Ragnarok porque significaría la destrucción de su planeta natal y el fin de la civilización Asgardiana a manos de una todopoderosa y nueva amenaza, la implacable Hela (Cate Blanchett). Pero, primero tendrá que sobrevivir a una competición letal de gladiadores que lo enfrentará a su aliado y compañero en los Vengadores, Hulk.",
+  },
+  {
+    id: "16",
+    title: "Spider-Man: Homecoming",
+    year: "2017",
+    img: "./img/16.jpg",
+    sinopsis:
+      "Un joven Peter Parker/Spider-Man (Tom Holland) comienza a experimentar su recién descubierta identidad como el superhéroe Spider-Man. Después de la experiencia vivida con los Vengadores, Peter regresa a casa, donde vive con su tía (Marisa Tomei). Bajo la atenta mirada de su supervisor Tony Stark (Robert Downey Jr.) Peter intenta mantener una vida normal pero irrumpe en su rutina diaria el nuevo villano Vulture (Michael Keaton) y con él, lo más importante de la vida de Peter se verá amenazado.",
+  },
+  {
+    id: "17",
+    title: "Black Panther",
+    year: "2018",
+    img: "./img/17.jpg",
+    sinopsis:
+      "T'Challa (Chadwick Boseman) es el líder del reino de Wakanda, una ultra avanzada nación africana. Este país posee el único depósito de Vibranium, un metal capaz de absorber las vibraciones sónicas y con el que se pueden fabricar armas. T'Challa deberá defender su país del ataque de los enemigos que quieren apoderarse del poderoso metal.",
+  },
+  {
+    id: "18",
+    title: "Vengadores: Infinity War",
+    year: "2018",
+    img: "./img/18.jpg",
+    sinopsis:
+      "Los Vengadores y sus superhéroes aliados deben estar dispuestos a sacrificarlo todo en un intento de derrotar al poderoso Thanos (Josh Brolin) antes de que su bombardeo de devastación y ruina ponga fin a todo el universo gracias al poder de las Gemas del Infinito, que está recopilando a lo largo y ancho del universo.",
+  },
+  {
+    id: "19",
+    title: "Ant-Man y la Avispa",
+    year: "2018",
+    img: "./img/19.jpg",
+    sinopsis:
+      'Después de "Capitán América: Guerra Civil", Scott Lang lidia con las consecuencias de sus elecciones como superhéroe y padre. Mientras lucha por mantener un equilibrio entre su vida hogareña y sus responsabilidades como Ant-Man, se enfrenta a Hope van Dyne y al Dr. Hank Pym con una nueva misión urgente. Scott debe volver a ponerse el traje y aprender a luchar junto con La Avispa mientras el equipo trabaja en conjunto para descubrir secretos del pasado. ',
+  },
+  {
+    id: "20",
+    title: "Capitana Marvel",
+    year: "2019",
+    img: "./img/20.jpg",
+    sinopsis:
+      "Situada en los años 90, la trama sigue las aventuras de Carol Danvers (Brie Larson), una poderosa guerrera que intenta mediar en un conflicto entre dos razas alienígenas que ha terminado llegando a la Tierra.",
+  },
+  {
+    id: "21",
+    title: "Vengadores: Endgame",
+    year: "2019",
+    img: "./img/21.jpg",
+    sinopsis:
+      "Tras lo ocurrido en ‘Vengadores: Infinity War’, el grupo marvelita superviviente hará lo imposible por solucionar el terrible golpe de Thanos, que ha eliminado a la mitad de la humanidad.",
+  },
+  {
+    id: "22",
+    title: "Spider-Man: Lejos de casa",
+    year: "2019",
+    img: "./img/22.jpg",
+    sinopsis:
+      "Tras los sucesos vistos en ‘Vengadores: Endgame’, Peter Parker (Tom Holland) hace lo que puede por adaptarse al nuevo mundo. Para ello, se dispone a tomarse unas vacaciones viajando por Europa junto con sus compañeros de instituto pero, tras varios ataques de unas criaturas llamadas Elementales, se verá obligado a ayudar a Nick Fury (Samuel L. Jackson) y compañía a salvar el planeta... otra vez.",
+  },
+  {
+    id: "23",
+    title: "Viuda Negra",
+    year: "2020",
+    img: "./img/23.jpg",
+    sinopsis:
+      "Natasha Romanoff, alias Viuda Negra (Scarlett Johansson), se enfrenta a las partes más oscuras de su pasado cuando surge una peligrosa conspiración. Perseguida por una fuerza que no se detendrá ante nada para derribarla, Natasha debe enfrentarse a su historia como espía y a las relaciones rotas que dejó a su paso mucho antes de convertirse en Vengadora.",
+  },
+  {
+    id: "24",
+    title: "Bruja Escarlata y Visión",
+    year: "2021",
+    img: "./img/24.jpg",
+    sinopsis:
+      "Combinando el estilo clásico de las sitcoms con el UCM, cuenta la historia Wanda Maximoff (Elizabeth Olsen) y Visión (Paul Bettany), dos seres con superpoderes que viven una vida idílica en las afueras de una ciudad hasta que un día comienzan a sospechar que no todo es lo que parece.",
+  },
+  {
+    id: "25",
+    title: "Loki",
+    year: "2021",
+    img: "./img/25.jpg",
+    sinopsis:
+      "Loki es llevado ante la misteriosa organización llamada Autoridad de Variación Temporal (TVA) y se le da a elegir enfrentarse a la eliminación de la realidad o ayudar contra una amenaza mayor,.",
+  },
+  {
+    id: "26",
+    title: "Shang-Chi y la leyenda de los diez anillos",
+    year: "2021",
+    img: "./img/26.jpg",
+    sinopsis:
+      "El maestro de artes marciales Shang-Chi se enfrenta al pasado que creía haber dejado atrás cuando se ve envuelto en la red de la misteriosa organización de los Diez Anillos.",
+  },
+  {
+    id: "27",
+    title: "Falcon y el Soldado de Invierno",
+    year: "2021",
+    img: "./img/27.jpg",
+    sinopsis:
+      "Se centra en las aventuras de Sam Wilson o Falcon (Anthony Mackie) y Bucky Barnes o el Soldado de Invierno (Sebastian Stan). Seis meses después de recibir el manto del Capitán América, Sam Wilson se une a Bucky Barnes en una aventura que pondrá a prueba sus habilidades, destrezas... y paciencia.",
+  },
+  {
+    id: "28",
+    title: "Eternals",
+    year: "2021",
+    img: "./img/28.jpg",
+    sinopsis:
+      "Da la bienvenida a un nuevo y emocionante equipo de superhéroes al Universo Cinematográfico de Marvel. La historia, que abarca miles de años, presenta a un grupo de héroes inmortales forzados a salir de las sombras para reunirse contra el enemigo más antiguo de la humanidad, Los Desviantes.",
+  },
+  {
+    id: "29",
+    title: "Spider-Man: No Way Home",
+    year: "2021",
+    img: "./img/29.jpg",
+    sinopsis:
+      "Tras ver desvelada su identidad secreta, Peter Parker pide ayuda al Doctor Extraño para revertir el conocimiento con un hechizo que, por suerte para el público, sale mal y llena su realidad de villanos de Spider-Man de otros universos.",
+  },
+  {
+    id: "30",
+    title: "Ojo de Halcón (Hawkeye)",
+    year: "2021",
+    img: "./img/30.jpg",
+    sinopsis:
+      'Narra las aventuras de Hawkeye desde el punto de vista de la sucesora de Clint Barton: Kate Bishop, una de las integrantes del grupo de "jóvenes vengadores". ',
+  },
+  {
+    id: "31",
+    title: "Yo soy Groot",
+    year: "2022",
+    img: "./img/31.jpg",
+    sinopsis:
+      "Yo soy Groot' consiste de cortometrajes protagonizados por Groot junto a varios personajes inusuales. Con su personalidad infantil y poco razonable, Groot abandona la nave espacial de los Guardianes de la Galaxia y acaba aterrizando en un planeta extraño, donde encuentra con todo tipo de criaturas.",
+  },
+  {
+    id: "32",
+    title: "Doctor Strange en el multiverso de la locura",
+    year: "2022",
+    img: "./img/32.jpg",
+    sinopsis:
+      "Tras los eventos de 'Vengadores: Endgame', Stephen Strange continua buscando la Piedra del Tiempo. Un viejo amigo convertido en enemigo pone fin a sus planes y hace que Strange desate un mal indescriptible.",
+  },
+  {
+    id: "33",
+    title: "Caballero Luna",
+    year: "2022",
+    img: "./img/33.jpg",
+    sinopsis:
+      "El apocado Marc Spector sufre un trastorno de personalidad múltiple y comienza a manifestar episodios en los que un tal Steven Grant toma control de su cuerpo. Poco a poco va descubriendo que es el elegido como avatar por una misteriosa divinidad egipcia.",
+  },
+  {
+    id: "34",
+    title: "She-Hulk: Abogada Hulka",
+    year: "2022",
+    img: "./img/34.jpg",
+    sinopsis:
+      "Jennifer Walters es abogada, soltera y algo tímida pero muy profesional. Su vida parece la típica de una chica en la treintena... excepto si se enfada. Si Jennifer se altera, se convierte en She-Hulk, una superheroína de 2 metros de color verde y con una fuerza sobrehumana. Tan solo su primo, Bruce Banner, alias Hulk, entiende su experiencia y la ayudará con sus transformaciones.",
+  },
+  {
+    id: "35",
+    title: "Ms. Marvel",
+    year: "2022",
+    img: "./img/35.jpg",
+    sinopsis:
+      "Una ávida 'gamer' y una voraz escritora de fan-fiction, Kamala, es una mega fan de los superhéroes con una imaginación descomunal, especialmente cuando se trata de Capitana Marvel. Sin embargo, Kamala siente que no encaja en el instituto y, a veces, incluso en casa. Bueno, hasta que obtiene superpoderes como los héroes que siempre ha admirado. Porque la vida mejora con superpoderes, ¿verdad?",
+  },
+  {
+    id: "36",
+    title: "Thor: Love and Thunder",
+    year: "2022",
+    img: "./img/36.jpg",
+    sinopsis:
+      "La película encuentra a Thor (Chris Hemsworth) en un viaje diferente a todo lo que ha enfrentado: Una búsqueda de la paz interior. Pero su retiro es interrumpido por un asesino galáctico conocido como Gorr el carnicero de dioses (Christian Bale), que busca la extinción de los dioses. Para combatir la amenaza, Thor solicita la ayuda de la reina Valkiria (Tessa Thompson), Korg (Taika Waititi) y su ex novia Jane Foster (Natalie Portman), quien, para sorpresa de Thor, empuña inexplicablemente su martillo mágico, Mjolnir, como la Poderosa Thor.",
+  },
+  {
+    id: "37",
+    title: "Black Panther: Wakanda Forever",
+    year: "2022",
+    img: "./img/37.jpg",
+    sinopsis:
+      "La reina Ramonda, Shuri y las demás personalidades de Wakanda luchan para proteger su nación de la presión mundial tras la muerte del rey T’Challa. Todo empeorará cuando un nuevo reino oculto, proviniento del fondo del mar, fuerce a Wakanda a ser su aliado contra el resto de países o su enemigo.",
+  },
+  {
+    id: "38",
+    title: "Guardianes de la Galaxia: Especial Felices Fiestas",
+    year: "2022",
+    img: "./img/38.jpg",
+    sinopsis:
+      'Con la misión de hacer que Peter Quill (Chris Pratt) tenga una Navidad inolvidable, Drax (Dave Bautista) y Mantis (Pom Klementieff) urden un "plan sin fisuras": dirigirse a la Tierra en busca del regalo perfecto, cierto héroe que desafió a todo un pueblo mediante su bailoteo, el legendario Kevin Bacon. ',
+  },
+  {
+    id: "39",
+    title: "Ant-Man y la Avispa: Quantumanía",
+    year: "2023",
+    img: "./img/39.jpg",
+    sinopsis:
+      "Scott Lang y Hope Van Dyne, junto con Hank Pym, Janet Van Dyne y Cassie Lang exploran el Reino Cuántico, donde interactúan con extrañas criaturas y se embarcan en una lucha contra Kang el Conquistador, el férreo emperador del mismo.",
+  },
+  {
+    id: "40",
+    title: "Guardianes de la Galaxia Vol. 3",
+    year: "2023",
+    img: "./img/40.jpg",
+    sinopsis:
+      " Los Guardianes de la Galaxia entran en una carrera a contrarreloj para salvar la vida de Rocket después de un brutal ataque a su hogar, Knowhere.",
+  },
+  {
+    id: "41",
+    title: "Invasión Secreta",
+    year: "2023",
+    img: "./img/41.jpg",
+    sinopsis:
+      "Invasión secreta' ha hecho su debut en Disney+ con la misión de restaurar la fe de los fans de Marvel en las series del UCM, tras las malas críticas recibidas por 'Ms. Marvel' y 'She-Hulk'. Y, aunque la serie en sí misma sí parece haber dado un salto de calidad respecto a las mencionadas anteriormente (ya veremos si suficiente), la controversia ha vuelto a salpicar a Marvel nada más empezar el episodio: en los mismísimos títulos de crédito.",
+  },
+  {
+    id: "42",
+    title: "The Marvels",
+    year: "2023",
+    img: "./img/42.jpg",
+    sinopsis:
+      "Carol Danvers, alias Capitana Marvel, ha recuperado la identidad que le arrebataron los tiránicos Kree y se ha cobrado su venganza contra la Inteligencia Suprema. Pero una serie de consecuencias imprevistas la obligan a cargar con el peso de un universo desestabilizado. Cuando el deber la lleva hasta un anómalo agujero de gusano vinculado a una revolucionaria Kree, sus poderes se conectan con los de su superfán de Nueva Jersey Kamala Khan, también conocida como Ms. Marvel, y con los de su sobrina, con la que está distanciada y es ahora astronauta en S.A.B.E.R., la capitana Monica Rambeau.",
+  },
+];
