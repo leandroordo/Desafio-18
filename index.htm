@@ -10,7 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="p-3 mb-3 border-bottom">
@@ -19,7 +19,7 @@
           class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start column-gap-5"
         >
           <a
-            href="/"
+            onclick="loadTemplate('home')"
             class="d-flex align-items-center mb-2 mb-lg-0 mr-6 link-body-emphasis text-decoration-none"
           >
             <img
@@ -32,13 +32,24 @@
           </a>
 
           <ul
+            id="navitems"
             class="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
             <li>
-              <a href="#" class="nav-link px-2 active">Home</a>
+              <a
+                id="home"
+                class="nav-link px-2 active"
+                onclick="loadTemplate('home')"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Nuevo</a>
+              <a
+                id="addmovie"
+                class="nav-link px-2 link-body-emphasis"
+                onclick="loadTemplate('addmovie')"
+                >Nuevo</a
+              >
             </li>
           </ul>
         </div>
@@ -48,183 +59,24 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Marvel Universe Movie finder</h1>
+            <h1 class="fw-light">Marvel Universe Movie Database</h1>
             <p class="lead text-body-secondary">
-              Info sobre películas y series del universo Marvel.
+              Info sobre películas y series del universo Marvel
             </p>
           </div>
         </div>
       </section>
-      <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-xs-12 col-sm-4">
-              <div class="card">
-                <img class="img-card"  src="./img/0.jpg" />
-                <div class="card-content">
-                  <h4 class="card-title">Iron Man
-                  </h4>
-                  <p class="card-sinopsis">
-                    Tony Stark (Robert Downey Jr.) se dedica a vender armas y lo tiene todo: dinero, poder, mujeres... Durante una demostración en Afganistán, un poderoso traficante lo captura. Gravemente herido (un fragmento de metralla está junto a su corazón), Stark se construye una armadura que le mantiene con vida y gracias a la cual escapa. Ya en USA, jura usar su nuevo traje para salvar a la gente.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <div class="card">
-                <img class="img-card"  src="./img/1.jpg" />
-                <div class="card-content">
-                  <h4 class="card-title">El increíble Hulk
-                  </h4>
-                  <p class="card-sinopsis">
-                    En esta ocasión, Bruce Banner (Edward Norton) comienza la película en Brasil, donde busca una cura para su sobreexposición a los rayos gamma que le transforma en Hulk. Banner huye del ejército, liderado por el general Ross (William Hurt), y del militar Emil Blonsky (Tim Roth), transformado también en un gigantesco y poderoso ser, La Abominación, que tras hacerse con el secreto que le convierte en un monstruo verde. Solo Betty Ross (Liv Tyler) estará a su lado
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <div class="card">
-                <img class="img-card"  src="./img/2.jpg" />
-                <div class="card-content">
-                  <h4 class="card-title">Iron Man 2
-                  </h4>
-                  <p class="card-sinopsis">
-                    Sometido a presiones por parte del gobierno, la prensa y la opinión pública para que comparta su tecnología con el ejército, Tony Stark (Robert Downey Jr.) es reacio a desvelar los secretos de la armadura de Iron Man porque teme que esa información pueda caer en manos indeseables. Con Pepper Potts (Gwyneth Paltrow) y James “Rhodey” Rhodes (Don Cheadle) a su lado, Tony forja alianzas nuevas y se enfrenta a nuevas y poderosas fuerzas.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <div class="card">
-                <img class="img-card"  src="./img/3.jpg" />
-                <div class="card-content">
-                  <h4 class="card-title">Thor
-                  </h4>
-                  <p class="card-sinopsis">
-                    Thor (Chris Hemsworth) es un poderoso pero arrogante guerrero cuyos imprudentes actos reavivan una antigua guerra. Como consecuencia, Thor es castigado a ser enviado a la Tierra, donde se ve obligado a vivir entre humanos. Cuando el villano más peligroso de su mundo envía a las fuerzas más oscuras de Asgard, Thor aprende lo que hace falta para ser un verdadero héroe.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <div class="card">
-                <img class="img-card"  src="./img/4.jpg" />
-                <div class="card-content">
-                  <h4 class="card-title">Capitán América: El primer vengador
-                  </h4>
-                  <p class="card-sinopsis">
-                    Se centra en los primeros días del Universo Marvel, cuando Steve Rogers (Chris Evans) se ofrece voluntario para participar en un programa experimental que lo convierte en el super soldado conocido como Capitán América. Rogers se une a Bucky Barnes (Sebastian Stan) y Peggy Carter (Hayley Atwell) para hacer la guerra a los malvados de la organización HYDRA, dirigido por el villano Red Skull (Hugo Weaving).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        
-        </div>
-      </div>
+      <section id="content"></section>
     </main>
-    <!--     
-    <div class="navbar navbar-light bg-light navbar-expand-md px-3">
-      <a href="#" class="navbar-brand">
-        <img src="./img/logo.jpeg" alt="" width="50px" height="50px" />
-      </a>
-      <div class="w-50 row">
-        <div class="col-8">
-          <div class="input-icons position-relative">
-            <i
-              class="fa-solid fa-magnifying-glass position-absolute translate-bottom mt-2 ms-2 ps-1 text-secondary"
-              aria-hidden="true"
-            ></i>
-            <input class="form-control" id="searchInput" type="text" />
-          </div>
-        </div>
-        <div class="col-4">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Año</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-          </select>
-        </div>
-      </div>
-      <button
-        class="navbar-toggler"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="menu">
-        <ul class="navbar-nav ms-auto" style="list-style: none">
-          <li class="nav-item mx-3">
-            <a href="#" class="nav-link">Nuevo</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <style media="all" id="fa-main">
-      /*!
-      * Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
-      * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-      * Copyright 2023 Fonticons, Inc.
-      */
-      .fa {
-        font-family: var(--fa-style-family, "Font Awesome 6 Free");
-        font-weight: var(--fa-style, 900);
-      }
-      .fa,
-      .fa-solid {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: var(--fa-display, inline-block);
-        font-style: normal;
-        font-variant: normal;
-        line-height: 1;
-        text-rendering: auto;
-      }
-      .fa-solid {
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-      }
-      .fa-magnifying-glass:before,
-      .fa-search:before {
-        content: "\f002";
-      }
-      .fa-comment-dots:before {
-        content: "\f4ad";
-      }
-      .fa-ellipsis:before {
-        content: "\f141";
-      }
-      @font-face {
-        font-family: "Font Awesome 6 Free";
-        font-style: normal;
-        font-weight: 400;
-        font-display: block;
-        src: url(https://ka-f.fontawesome.com/releases/v6.5.1/webfonts/free-fa-regular-400.woff2)
-            format("woff2"),
-          url(https://ka-f.fontawesome.com/releases/v6.5.1/webfonts/free-fa-regular-400.ttf)
-            format("truetype");
-      }
-      @font-face {
-        font-family: "Font Awesome 6 Free";
-        font-style: normal;
-        font-weight: 900;
-        font-display: block;
-        src: url(https://ka-f.fontawesome.com/releases/v6.5.1/webfonts/free-fa-solid-900.woff2)
-            format("woff2"),
-          url(https://ka-f.fontawesome.com/releases/v6.5.1/webfonts/free-fa-solid-900.ttf)
-            format("truetype");
-      }
-    </style> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="movies.js"></script>
+    <script src="index.js"></script>
+    <script src="./pages/home.js"></script>
+    <script src="./pages/addmovie.js"></script>
   </body>
 </html>
