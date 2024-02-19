@@ -1,0 +1,17 @@
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\movies.server.exe
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\movies.server.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\movies.server.deps.json
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\movies.server.runtimeconfig.json
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\movies.server.pdb
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Azure.Storage.Blobs.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Azure.Storage.Common.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\System.IO.Hashing.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Release\net8.0\PubTmp\Out\System.Memory.Data.dll
