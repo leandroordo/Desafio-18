@@ -1,4 +1,10 @@
 ﻿using Azure.Storage.Blobs;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
+using movies.server;
+using System.ComponentModel;
+using System.IO;
+using System.Text.Json;
 
 
 public class StorageService
@@ -24,6 +30,22 @@ public class StorageService
             {
                 return await streamReader.ReadToEndAsync();
             }
+        }
+    }
+    public async Task PutJsonFileAsync(string containerName, string blobName, List<Movie> Movies)
+    {
+        CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
+        CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+        CloudBlobContainer container = blobClient.GetContainerReference(containerName);
+        CloudBlockBlob blockBlob = container.GetBlockBlobReference(blobName);
+
+        using (var memoryStream = new MemoryStream())
+        {
+            var newJson = JsonSerializer.Serialize<IEnumerable<Movie>>(Movies);
+            byte[] byteArray = System.Text.Encoding.ASCII.GetBytes(newJson);
+            memoryStream.Write(byteArray, 0, byteArray.Length);
+            memoryStream.Position = 0;
+            await blockBlob.UploadFromStreamAsync(memoryStream);
         }
     }
 }

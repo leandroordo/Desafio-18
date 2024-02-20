@@ -6,13 +6,13 @@ function setUpHomePage() {
 
   const mainElement = document.querySelector("#moviesContainer");
   let script = document.createElement("script");
-  script.textContent = "loadMovies()";
+  script.textContent = "showMovies()";
   mainElement.appendChild(script);
 
   const searchInput = document.getElementById("searchInput");
   const selectList = document.getElementById("yearsSelect");
 
-  const findMovies = debounce(() => {
+  const filterMovies = debounce(() => {
     const searchTitle = searchInput.value.trim().toLowerCase();
     var searchYear = selectList.value;
 
@@ -26,22 +26,13 @@ function setUpHomePage() {
           ((searchYear && m.year === searchYear) || !searchYear)
       );
     } else filteredMovies = movies;
-    loadMovies();
+    showMovies();
   });
 
-  searchInput.addEventListener("keyup", () => findMovies());
-  selectList.addEventListener("change", () => findMovies());
+  searchInput.addEventListener("keyup", () => filterMovies());
+  selectList.addEventListener("change", () => filterMovies());
 
-  //Cargar lista de años
-  const options = getYears();
-
-  for (var i = 0; i < options.length; i++) {
-    var opt = options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    selectList.appendChild(el);
-  }
+  loadYearsList();
 }
 
 function debounce(func, timeout = 1000) {
@@ -87,14 +78,31 @@ function loadMovies() {
     return response.text();
   };
 
-  fetch("my-json-server.typicode.com/leandroordo/Desafio-18/movies/")
+  fetch("https://leandroordonez.azurewebsites.net/movies", {
+    method: "GET",
+    mode: "cors",
+    headers: new Headers({ "Content-type": "application/json" }),
+  })
     .then((response) => isResponseOk(response))
-    .then((data) => console.log("Datos: ", data))
-    .catch((err) => console.error("ERROR: ", err.message));
+    .then((data) => {
+      movies = JSON.parse(data);
+      filteredMovies = movies;
+      showMovies();
+      loadYearsList();
+    })
+    .catch((err) => {
+      //Mostrar error
+      showError();
+      console.error("ERROR: ", err.message);
+    });
 }
 
+function showError() {
+  const errorDiv = document.getElementById("errorbox");
+  errorDiv.classList.remove("hidden");
+}
 //Get movies
-movies = loadMovies();
+loadMovies();
 
 document.addEventListener("DOMContentLoaded", () => loadTemplate("home"));
 

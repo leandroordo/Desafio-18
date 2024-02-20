@@ -42,14 +42,28 @@ function addMovie() {
   if (!validate(synopsis)) return;
 
   //Agregar nueva película
-  movies.push({
-    id: movies.length,
+  const movie = {
+    id: "0",
     title: name.value.trim(),
     year: year.value,
     img: pictureUrl.value,
     synopsis: synopsis.value,
-  });
+  };
 
-  //Volver a la home
-  loadTemplate("home");
+  fetch("https://leandroordonez.azurewebsites.net/movies", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(movie),
+  })
+    .then((response) => response.json())
+    .then(() => {
+      loadMovies();
+      loadTemplate("home");
+    }) //Volver a la home
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }

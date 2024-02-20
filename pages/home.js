@@ -1,4 +1,4 @@
-function loadMovies() {
+function showMovies() {
   var moviesHtml = "";
 
   filteredMovies.forEach((element) => {
@@ -26,4 +26,18 @@ function loadMovies() {
 function getYears() {
   //Devolver un array de los años de las películas. Cada año debe aparecer una sola vez
   return [...new Set(movies.map((movie) => movie.year))].sort();
+}
+
+function loadYearsList() {
+  //Cargar lista de años
+  const selectList = document.getElementById("yearsSelect");
+  const options = getYears();
+
+  for (var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    selectList.appendChild(el);
+  }
 }

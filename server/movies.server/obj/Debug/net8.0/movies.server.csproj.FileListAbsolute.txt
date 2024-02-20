@@ -37,3 +37,5 @@ C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Debug\
 C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Debug\net8.0\movies.server.pdb
 C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Debug\net8.0\movies.server.genruntimeconfig.cache
 C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\obj\Debug\net8.0\ref\movies.server.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\leand\Documentos\EducacionIT\Desafio-18\server\movies.server\bin\Debug\net8.0\Microsoft.WindowsAzure.Storage.dll
