@@ -99,7 +99,7 @@ function loadMovies() {
 
 function showError() {
   const errorDiv = document.getElementById("errorbox");
-  errorDiv.classList.remove("hidden");
+  errorDiv.classList.remove("d-none");
 }
 //Get movies
 loadMovies();
